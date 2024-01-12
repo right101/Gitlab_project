@@ -1,6 +1,6 @@
 virginia:
 	terraform workspace new virginia || terraform workspace select virginia
-	terraform init
+	terraform init 
 	terraform apply -var-file regions/virginia.tfvars --auto-approve
 	
 ohio:
