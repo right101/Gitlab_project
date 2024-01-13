@@ -5,6 +5,7 @@ variable "region" {
 variable "env" {
     type = string
     description = "Indicates the environment"
+    default = ""
 }
 variable "subnet" {
     type = string
@@ -63,8 +64,4 @@ variable "private_subnet_cidr_blocks" {
     type = list(string)
     description = "List of cidr blocks"
     default  = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
-}
-variable "availability_zones" {
-    type = list(string)
-    description = "this is for AZs"
 }
