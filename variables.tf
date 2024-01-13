@@ -65,3 +65,24 @@ variable "private_subnet_cidr_blocks" {
     description = "List of cidr blocks"
     default  = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
 }
+variable "name" {
+    type = string
+    description = "This is name for security group"
+    default  = "project_sg"
+}
+variable "project_ports" {
+    type = list(string)
+    description = "List of ports"
+    default = ["22", "80", "3306", "443"]
+}
+
+variable "cidr_blocks" {
+    type = string
+    description = "this is for cidr block"
+    default  = "0.0.0.0/0"
+}
+variable "protocol" {
+    type = string
+    description = "this is for protocol"
+    default  = "tcp"
+}
