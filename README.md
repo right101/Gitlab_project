@@ -1,4 +1,4 @@
-Multi-Region AWS Infrastructure with GitLab
+**Multi-Region AWS Infrastructure with GitLab**
 
 Overview
 This repository facilitates the automated setup of a robust AWS infrastructure and GitLab installation. It includes the creation and configuration of VPCs, subnets, security groups, EC2 instances, route tables, NAT gateways, Internet Gateways, and Elastic IPs across different AWS regions, managed using a Makefile and Terraform.
