@@ -4,10 +4,11 @@ Overview
 This repository facilitates the automated setup of a robust AWS infrastructure and GitLab installation. It includes the creation and configuration of VPCs, subnets, security groups, EC2 instances, route tables, NAT gateways, Internet Gateways, and Elastic IPs across different AWS regions, managed using a Makefile and Terraform.
 
 Prerequisites
-Amazon Linux 2: Suitable for GitLab installation. Installation Guide for Amazon Linux 2
-Memory: Minimum 4 GiB of RAM recommended for GitLab.
-AWS Account & CLI: Configured with necessary credentials.
-Terraform: Installed for infrastructure provisioning.
+Amazon Linux 2:  Suitable for GitLab installation. Installation Guide for Amazon Linux 2
+Memory:  Minimum 4 GiB of RAM recommended for GitLab.
+AWS Account & CLI:  Configured with necessary credentials.
+Terraform:  Installed for infrastructure provisioning.
+
 GitLab Installation
 Refer to the instructions in the GitLab Installation Project section.
 
