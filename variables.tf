@@ -7,21 +7,33 @@ variable "env" {
     description = "Indicates the environment"
     default = ""
 }
+variable "key_name" {
+    type = string
+    description = "ssh key name"
+    default = "bastion_key"
+  
+}
+variable "instance_type" {
+    type = string
+    description = "instance type"
+    default = "t2.large"
+  
+}
 variable "subnet" {
     type = string
     description = "name for my subnet"
     default = "subnet"
 }
-variable "Public_rt" {
-    type = string
-    description = "name for my public rt"
-    default = "Public_rt"
-}
-variable "Private_rt" {
-    type = string
-    description = "name for my private rt"
-    default = "Private_rt"
-}
+# variable "Public_rt" {
+#     type = string
+#     description = "name for my public rt"
+#     default = "Public_rt"
+# }
+# variable "Private_rt" {
+#     type = string
+#     description = "name for my private rt"
+#     default = "Private_rt"
+# }
 variable "main_igw" {
     type = string
     description = "name for my igw"
