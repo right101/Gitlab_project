@@ -40,9 +40,7 @@ resource "aws_nat_gateway" "main" {
     Name = var.main_ngw
   }
 }
-resource "aws_eip" "elastic" {
-  vpc      = true
-}
+
 resource "aws_route_table_association" "task2" {
   count = 3
   subnet_id      = aws_subnet.private_subnet[count.index].id

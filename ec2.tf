@@ -6,3 +6,10 @@ resource "aws_instance" "gitlab" {
     key_name               = aws_key_pair.bastion_key.key_name
     user_data              = file("gitlab.sh")
 }
+resource "aws_eip" "gitlab_eip" {
+  vpc      = true
+}
+resource "aws_eip_association" "gitlab_eip_assoc" {
+  instance_id   = aws_instance.gitlab.id
+  allocation_id = aws_eip.gitlab_eip.id
+}
