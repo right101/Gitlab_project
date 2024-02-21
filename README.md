@@ -34,3 +34,25 @@ Use the Makefile for efficient multi-region infrastructure management.
 ## Usage
 Deploy and manage applications across multi-region AWS infrastructure. Utilize GitLab for collaborative development and CI/CD processes.
 
+
+## Accessing GitLab
+
+After deploying your infrastructure, follow these steps to access your GitLab instance and complete the initial setup:
+
+### Step 1: Obtain the Public IP Address
+
+- Once the deployment is complete, retrieve the public IP address of your GitLab instance from the AWS EC2 console.
+- **Note:** It may take up to 5 minutes for the public IP address to appear and for the GitLab service to become fully operational. Please be patient during this period.
+
+### Step 2: Access GitLab through Your Browser
+
+- Open a web browser and navigate to the public IP address of your GitLab instance. 
+
+### Step 3: GitLab Initial Login
+
+- Upon accessing GitLab for the first time, you will be directed to a login page.
+- **Username:** The default username for GitLab is `root`.
+- **Password Retrieval:** To obtain the initial password for the `root` user, SSH into your GitLab server and execute the following command:
+
+```bash
+sudo cat /etc/gitlab/initial_root_password
