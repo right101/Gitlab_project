@@ -33,14 +33,16 @@ resource "aws_route_table" "private" {
     }
 }
 resource "aws_nat_gateway" "main" {
-  allocation_id = aws_eip.gitlab_eip.id
+  allocation_id = aws_eip.nat_eip.id
   connectivity_type = "public"
   subnet_id         = aws_subnet.public_subnet[0].id
   tags = {
     Name = var.main_ngw
   }
 }
-
+resource "aws_eip" "nat_eip" {
+  vpc      = true
+}
 resource "aws_route_table_association" "task2" {
   count = 3
   subnet_id      = aws_subnet.private_subnet[count.index].id
