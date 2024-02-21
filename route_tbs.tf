@@ -33,7 +33,7 @@ resource "aws_route_table" "private" {
     }
 }
 resource "aws_nat_gateway" "main" {
-  allocation_id = aws_eip.elastic.id
+  allocation_id = aws_eip.gitlab_eip.id
   connectivity_type = "public"
   subnet_id         = aws_subnet.public_subnet[0].id
   tags = {
